@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import "./Title.css";
 interface DetailsProps {
   showButton?: boolean;
-  locationUrl?: any;
+  locationUrl?: any ;
   title?: string | null;
   [rates: string]: any;
   currencyName: any;
+
+
 }
 const Title = ({
   showButton,
@@ -19,11 +21,11 @@ const Title = ({
     <div className="title-component">
       {currencyName &&
         Object.keys(currencyName)
-          .filter((item: any) => item.startsWith(rates?.base))
+          .filter((item: string) => item.startsWith(locationUrl?.pathname?.split("/")[2]))
           .map((item, i) => (
             <h5 key={i}>
               {locationUrl?.pathname !== "/"
-                ? currencyName[item]
+                ? <> {item}-{currencyName[item]} </>
                 : "Currency Exchanger"}
             </h5>
           ))}

@@ -1,36 +1,138 @@
-
+.main-card{
+    margin: auto ;
+    padding: 0;
+}
 .main-card-amount {
-    width: 40%;
+    padding: 1.5rem;
 }
 .main-card-amount input{
     display: block;
+   
 }
 .main-card-exchange{
-    width: 60%;
+    padding: 1.5rem;
 }
 .main-card-result{
     display: flex;
+    text-align: center;
+    margin: 10px auto;
+}
+.main-card-result a ,.convert-button{
+    background-color: #252d4a;
+    color: white; 
+    padding: 12px;
 }
 
+.main-card-result a{
+    margin:  auto 50px;
+    padding: 12px 50px;
+}
+.result-currency{
+    padding: 17px;
+    width: 30%;
+}
+.box-currency-rate{
+    padding: 15px;
+    text-align: center;
+    margin: 63px auto 0px auto;
 
+}
+.amount-input , select{
+    padding: 10px ;
+}
+select{
+    width: 23%;
+    margin: 15px;
+}
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+}
+svg{
+    margin: -17px 15px;
+    font-size: 42px;
+}
+.disable{
+    cursor: not-allowed;
+}
 @media (max-width: 575.98px) {
-    
+    .amount-input{
+        width: -webkit-fill-available;
+    }
+    .convert-button{
+        width: 95%;
+    }
+    .main-card-result a {
+        margin: auto 10px;
+    }
+    .box-currency-rate {
+        margin: 18px auto 0px auto;
+    }
   }
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {  }
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .amount-input{
+        width: -webkit-fill-available;
+    }
+    .convert-button{
+        width: 95%;
+    }
+    .main-card-result a {
+        margin: auto 10px;
+    }
+    .box-currency-rate {
+        margin: 18px auto 0px auto;
+    }
+ }
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) { }
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .main-card{
+        display: flex;
+    }
+    .main-card-amount {
+        width: 40%;
+    }
+    .main-card-exchange{
+        width: 60%;
+    }
+    .main-card-result a {
+        margin: auto 10px;
+    }
+ }
 
 /* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {  }
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .main-card{
+        display: flex;
+    }
+    .main-card-amount {
+        width: 40%;
+    }
+    .main-card-exchange{
+        width: 60%;
+    }
+    .convert-button{
+        width: 70%;
+    }
+ }
 
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
     .main-card{
-        padding:  20px;
         display: flex;
+    }
+    .main-card-amount {
+        width: 40%;
+    }
+    .main-card-exchange{
+        width: 60%;
+    }
+    .convert-button{
+        width: 70%;
     }
  }

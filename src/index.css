@@ -27,3 +27,7 @@ a{
 .box-shadow{
   box-shadow: var(--box-shadow);
 }
+.app-body{
+  max-width: 1200px;
+  margin: auto ;
+}

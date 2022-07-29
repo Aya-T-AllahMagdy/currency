@@ -1,0 +1,24 @@
+.cards {
+  margin: 3rem auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+.card {
+  padding: 1rem;
+  height: 4rem;
+  text-align: center;
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
