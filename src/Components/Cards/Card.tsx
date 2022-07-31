@@ -4,7 +4,7 @@ interface DetailsProps {
   [rates: string]: any;
 }
 const Card = ({ rates }: DetailsProps) => {
-  console.log(rates,'ooo')
+
   return (
     <div className="cards">
    

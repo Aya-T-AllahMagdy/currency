@@ -28,7 +28,7 @@ function App({symbols,rates,baseCurrency, symbolCurrency ,locationUrl,item ,data
     axios
     .get(`https://api.apilayer.com/fixer/latest?symbols`, {
       headers: {
-        "apikey": "KQlDFB9IjIxSVIaiG8sgoPGFK8A2zP0S",
+        "apikey": "ssWxd5wvDVdTbfwuwGHBTMdhJLKDjBXc",
       },
       responseType: "json",
     })
@@ -40,7 +40,7 @@ const currencyName =()=>{
   axios
   .get(`https://api.apilayer.com/fixer/symbols`, {
     headers: {
-      "apikey": "KQlDFB9IjIxSVIaiG8sgoPGFK8A2zP0S",
+      "apikey": "ssWxd5wvDVdTbfwuwGHBTMdhJLKDjBXc",
     },
     responseType: "json",
   })
@@ -50,7 +50,7 @@ const currencyName =()=>{
 } 
  useEffect(() => {
   changeCurrency()
-  // currencyName();
+  currencyName();
 }, []);
   return (
     <div className="App">

@@ -2,7 +2,6 @@ import { useState, useEffect, SetStateAction } from "react";
 import axios from "axios";
 import { FaArrowsAltH } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import changeCurrency from "./../../App"
 import "./MainCard.css";
 interface DetailsProps {
   locationUrl?:any ,
@@ -22,6 +21,7 @@ timestamp: number
 }
 
 const MainCard = ({ showButton, title, rates ,locationUrl}: DetailsProps) => {
+
   // to set value that user has to exchange it to another currency
   const [inputValue, setInputValue] = useState('');
   // to set EUR by default when fire website (1 EUR = xx USD)
@@ -37,7 +37,7 @@ const MainCard = ({ showButton, title, rates ,locationUrl}: DetailsProps) => {
     axios
     .get(`https://api.apilayer.com/fixer/latest?symbols=${currency2}&base=${currency1}`, {
       headers: {
-        "apikey": "KQlDFB9IjIxSVIaiG8sgoPGFK8A2zP0S",
+        "apikey": "ssWxd5wvDVdTbfwuwGHBTMdhJLKDjBXc",
       },
       responseType: "json",
     })
@@ -46,7 +46,7 @@ const MainCard = ({ showButton, title, rates ,locationUrl}: DetailsProps) => {
     });
 } 
  useEffect(() => {
-  // changeCurrency()
+  changeCurrency()
 }, [currency2,currency1 ]);
 
 

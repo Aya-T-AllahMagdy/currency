@@ -17,6 +17,7 @@ const Title = ({
   rates,
   locationUrl,
 }: DetailsProps) => {
+  {console.log(currencyName,'pp')}
   return (
     <div className="title-component">
       {currencyName &&
@@ -24,12 +25,12 @@ const Title = ({
           .filter((item: string) => item.startsWith(locationUrl?.pathname?.split("/")[2]))
           .map((item, i) => (
             <h5 key={i}>
-              {locationUrl?.pathname !== "/"
-                ? <> {item}-{currencyName[item]} </>
-                : "Currency Exchanger"}
+              {locationUrl?.pathname === "/"
+                ? "Currency Exchanger"
+                : <> {item}-{currencyName[item]} </>}
             </h5>
           ))}
-      {locationUrl?.pathname !== "/" ? <Link to="/">back to home</Link> : ""}
+      {locationUrl?.pathname !== "/" ? <Link to="/" className="border-radius-10 box-shadow">back to home</Link> : ""}
     </div>
   );
 };
